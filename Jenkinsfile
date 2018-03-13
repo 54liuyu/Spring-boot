@@ -2,10 +2,6 @@ pipeline {
 
   agent any
 
-  tiggers {
-    pollSCM('* * * * *')
-  }
-
   stages {
     stage('build') {
       steps {
