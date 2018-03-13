@@ -7,12 +7,13 @@ pipeline {
       steps {
         sh 'chmod 700 ./gradlew'
         sh './gradlew build'
+        sh './mkdir log'
       }
     }
 
     stage('deploy') {
       steps {
-        sh 'nohup ./gradlew bootRun > nohup.out 2>&1 &'
+        sh 'nohup java -jar ./build/libs/*.war > ./log/nohup.out 2>&1 &'
       }
     }
   }
