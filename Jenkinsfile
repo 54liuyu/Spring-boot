@@ -5,6 +5,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        sh 'su - root'
         sh 'chmod 700 ./gradlew'
         sh './gradlew build'
       }
