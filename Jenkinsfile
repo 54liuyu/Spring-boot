@@ -9,5 +9,11 @@ pipeline {
         sh './gradlew build'
       }
     }
+
+    stage('deploy') {
+      steps {
+        sh 'nohup ./gradlew bootRun > nohup.out 2>&1 &'
+      }
+    }
   }
 }
