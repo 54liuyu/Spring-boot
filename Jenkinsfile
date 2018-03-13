@@ -12,9 +12,8 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh './gradlew bootRun'
+        sh 'nohup ./gradlew bootRun > nohup.out 2>&1 &'
       }
     }
-
   }
 }
