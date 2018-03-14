@@ -7,7 +7,7 @@ pipeline {
       steps {
         sh 'chmod 700 ./gradlew'
         sh './gradlew build'
-        sh './mkdir log'
+        sh 'mkdir log'
       }
     }
 
