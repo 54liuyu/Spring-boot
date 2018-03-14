@@ -13,7 +13,7 @@ pipeline {
     stage('deploy') {
       steps {
         sh 'BUILD_ID=dontKillMe'
-        sh 'nohup java -jar ./build/libs/*.war  > ./nohup.out 2>&1 &'
+        sh 'java -jar ./build/libs/*.war'
       }
     }
   }
