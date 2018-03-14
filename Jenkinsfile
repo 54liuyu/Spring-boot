@@ -10,7 +10,7 @@ pipeline {
       }
     }
 
-    stage('deploy') {
+    stage('test') {
       steps {
         sh './gradlew test'
       }
