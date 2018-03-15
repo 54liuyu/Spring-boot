@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Created by liuyu21 on 2018/2/11.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=Application.class)
+@SpringBootTest(classes = Application.class)
 public class HelloTests {
 
     @Autowired
@@ -38,7 +38,7 @@ public class HelloTests {
     public void getHello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Hello World!")));
+                .andExpect(content().string(equalTo("Hello liuyu!")));
     }
 
 }
