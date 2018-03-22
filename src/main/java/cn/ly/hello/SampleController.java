@@ -15,7 +15,7 @@ public class SampleController {
     @RequestMapping("/hello")
     @ResponseBody
     String home() {
-        return "Hello, HR!";
+        return "Hello World!";
     }
 
 
